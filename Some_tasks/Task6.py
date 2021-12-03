@@ -1,5 +1,5 @@
+lbest, dbest, dus, lus = 0, 0, 0, 10 ** 200
 
-lbest, dbest, dus , lus = 0, 0, 0, 10**200
 
 def DFS_to_Lus(u, now):
     global lbest
@@ -9,21 +9,20 @@ def DFS_to_Lus(u, now):
         return
     usedl[u] = True
     for i in matrl[u]:
-        DFS_to_Lus(i , now+1)
+        DFS_to_Lus(i, now + 1)
     lbest = now if now > lbest else lbest
 
 
-def DFS_to_Dus(u,now):
+def DFS_to_Dus(u, now):
     global dbest
     # print(now)
     if (usedd[u] == True):
         return
     usedd[u] = True
     for i in matrd[u]:
-        DFS_to_Dus(i , now+1)
+        DFS_to_Dus(i, now + 1)
 
     dbest = now if now > dbest else dbest
-
 
 
 if __name__ == '__main__':
@@ -44,21 +43,19 @@ if __name__ == '__main__':
         matrd[x - 1].append(y - 1)
         matrd[y - 1].append(x - 1)
 
-    for i in range(nl ):
-        DFS_to_Lus(i , 0)
-        lus = min (lus , lbest)
+    for i in range(nl):
+        DFS_to_Lus(i, 0)
+        lus = min(lus, lbest)
         lbest = 0
         usedl = [False for i in range(nl)]
     for i in range(nd):
-        DFS_to_Dus(i,0)
-        dus = max(dus , dbest)
+        DFS_to_Dus(i, 0)
+        dus = max(dus, dbest)
         dbest = 0
         usedd = [False for i in range(nd)]
     # print(lus , '   ' , dus )
-    res = 'L' if lus>dus else 'D'
+    res = 'L' if lus > dus else 'D'
     print(res)
-
-
 
 '''
 7

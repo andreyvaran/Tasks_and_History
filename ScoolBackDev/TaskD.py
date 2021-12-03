@@ -1,5 +1,6 @@
 import csv
 
+
 def get_table(market_path, billing_path):
     print("order_id,shop_name,shop_id,cost")
     try:
@@ -31,12 +32,11 @@ def get_table(market_path, billing_path):
                     break
     except Exception as e:
         pass
+
+
 if __name__ == '__main__':
     market_path, billing_path = input().split()
     get_table(market_path, billing_path)
-
-
-
 
 '''
 Во время проектирования распределенной системы планировалось использовать две различные базы данных.

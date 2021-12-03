@@ -6,7 +6,8 @@ def caretaker_simulator(filename, i):
             print('-' * 43)
             for i in x:
                 print('|%-19s|%s|%s|' % (
-                ' '.join(i.strip().split()[:-2]), i.strip().split()[-2].center(10), i.strip().split()[-1].center(10)))
+                    ' '.join(i.strip().split()[:-2]), i.strip().split()[-2].center(10),
+                    i.strip().split()[-1].center(10)))
             print('-' * 43)
     elif i == 2:
         with open(filename, 'r', encoding='utf-8') as f:

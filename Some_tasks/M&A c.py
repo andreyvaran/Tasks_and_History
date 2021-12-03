@@ -6,7 +6,8 @@ def caretaker_simulator(filename, i):
             print('-' * 43)
             for i in x:
                 print('|%-19s|%s|%s|' % (
-                ' '.join(i.strip().split()[:-2]), i.strip().split()[-2].center(10), i.strip().split()[-1].center(10)))
+                    ' '.join(i.strip().split()[:-2]), i.strip().split()[-2].center(10),
+                    i.strip().split()[-1].center(10)))
             print('-' * 43)
     elif i == 2:
         with open(filename, 'r', encoding='utf-8') as f:
@@ -46,12 +47,13 @@ def caretaker_simulator(filename, i):
             f.write(i)
         f.close()
     elif i == 8:
-        print(str(sum(1 for line in open(filename, 'r', encoding='utf-8')))+'количество строк')
+        print(str(sum(1 for line in open(filename, 'r', encoding='utf-8'))) + 'количество строк')
     elif i == 9:
         x = int(input('Введите ваш рост'))
         y = int(input('Введите ваш вес'))
         print('Ваш рост + вес = ' + str(x + y))
         print('Ваш рост + вес = ' + str(x) + str(y) + ' Я ДЖАВА СКРПИПТ')
+
 
 def PrintMenu():
     print('---------------------------------------------------')
@@ -67,22 +69,23 @@ def PrintMenu():
     print('End (E) : Выход из программы')
     print('Menu (M) : вывод меню')
 
-ar_to_end = ["end",'e','E','End']
-ar_to_menu = ['Menu','menu','m','M']
+
+ar_to_end = ["end", 'e', 'E', 'End']
+ar_to_menu = ['Menu', 'menu', 'm', 'M']
 PrintMenu()
 name = input('Введите название файла с которым хотите работать: ')
 
 user_chose = "Ya Molodec"
-while user_chose not in ar_to_end :
+while user_chose not in ar_to_end:
     user_chose = input('Выберете операцию (Menu (M): показать меню ) :')
     if user_chose == '1':
         with open(name, 'r', encoding='utf-8') as f:
-            file=f.readline()
+            file = f.readline()
         print('---------------------------------------------------')
     if user_chose == '2':
-        caretaker_simulator(name,user_chose)
+        caretaker_simulator(name, user_chose)
         print('---------------------------------------------------')
-    if user_chose== '3':
+    if user_chose == '3':
         caretaker_simulator(name, user_chose)
         print('---------------------------------------------------')
     if user_chose == '4':

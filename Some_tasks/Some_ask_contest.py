@@ -74,7 +74,7 @@ for i in range(int(n)):
             vehicles.append(Truck(Num, Type, Speed))
 
 dist = int(vehicles[0].distance(t))
-mindist = min ( m - dist % m ,dist % m )
+mindist = min(m - dist % m, dist % m)
 ans = int(vehicles[0].num)
 
 for i in range(n):
