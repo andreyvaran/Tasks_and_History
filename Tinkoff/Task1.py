@@ -1,11 +1,13 @@
-n,k,m  = map(int , input().split())
+if __name__ == '__main__':
 
-# mass = m
-ost = k%m
-used = k-ost
-# total = 0
-if used!=0:
-    print(((n-ost)//used)*(used//m))
+    n, k, m = map(int, input().split())
 
-else:
-    print(0)
+    # mass = m
+    ost = k % m
+    used = k - ost
+    # total = 0
+    if used != 0:
+        print(((n - ost) // used) * (used // m))
+
+    else:
+        print(0)
