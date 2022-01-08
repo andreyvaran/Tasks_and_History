@@ -17,10 +17,30 @@ if __name__ == '__main__':
     # if simb_in_str(s , t1) and simb_in_str(s ,t2):
     #     print('hui')
 
+
+
+
 '''
+
+
+
+ez 
+
 huila
 hui
-a
+la
+
+stopgame
+sam
+topge
+
+Можно попытаться описать что если в 2 словах есть одинаковая последовательность 
+gaharaghr
+grh
+aaagrh
+
+sam
+topge
 
 
 '''
